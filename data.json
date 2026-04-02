@@ -1,0 +1,36 @@
+{
+    "Irwan": {
+        "basic_income": 2878.3,
+        "annual_increment": 225.0,
+        "allowances": {
+            "Bayaran Insentif Wilayah": 360.0,
+            "Bayaran Insentif (BI) Kritikal": 165.0,
+            "Imbuhan Tetap Perumahan": 300.0,
+            "Imbuhan Tetap Khidmat Awam (ITKA)": 300.0,
+            "Bayaran Imbuhan Sara Hidup": 600.0
+        },
+        "extra_income": {},
+        "fixed": {
+            "COWAY": 239.0,
+            "Phone bill": 520.3,
+            "Sewa PR1MA": 1000.0,
+            "Hulya Needs": 240.0,
+            "Taska Intan": 350.0,
+            "ASTRO bill": 108.75,
+            "Insurance Hulya": 214.0,
+            "Car Installment": 579.0
+        },
+        "variable": {
+            "Gym": 88.0,
+            "Groceries": 350.0
+        },
+        "savings": {},
+        "debts": {
+            "Hutang Mak": {
+                "total_amount": 47000.0,
+                "paid_amount": 10300.0,
+                "monthly_payment": 300.0
+            }
+        }
+    }
+}
