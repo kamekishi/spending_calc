@@ -314,7 +314,8 @@ if st.session_state.selected_user:
 
         with col1:
             if not df.empty:
-                st.dataframe(df, use_container_width=True)
+                styled_df = df.style.format({"Amount": format_rm})
+                st.dataframe(styled_df, use_container_width=True)
 
                 for item in list(data.keys()):
                     row_col1, row_col2, row_col3 = st.columns([4, 2, 1])
@@ -403,7 +404,12 @@ if st.session_state.selected_user:
             base_income += increment
 
         df = pd.DataFrame(forecast)
-        st.dataframe(df)
+        styled_forecast = df.style.format({
+            "Income": format_rm,
+            "Spending": format_rm,
+            "Total Savings": format_rm
+        })
+        st.dataframe(styled_forecast, use_container_width=True)
         st.line_chart(df.set_index("Year"))
     
     # ---------------- Debts ----------------
@@ -431,7 +437,13 @@ if st.session_state.selected_user:
                 })
 
             debt_df = pd.DataFrame(debt_rows)
-            st.dataframe(debt_df, use_container_width=True)
+            styled_debt_df = debt_df.style.format({
+                "Total Amount": format_rm,
+                "Paid Amount": format_rm,
+                "Remaining Balance": format_rm,
+                "Monthly Payment": format_rm
+            })
+            st.dataframe(styled_debt_df, use_container_width=True)
 
             st.markdown("### Edit Debts")
 
